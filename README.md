@@ -34,5 +34,15 @@ After giving moves alternatively you have to click the 'Submit' button. Player's
 
 After clicking on the 'New Game' button, a new board will be appeared.
 
+# Screenshots
+
+Game Board of match in progess
+
+<img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/matchInProgess.PNG">
+
+Game Board after the game ends
+
+<img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/winning.png">
+
 
 
