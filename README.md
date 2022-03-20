@@ -56,3 +56,15 @@ Game Board after the game ends
 **Vue js dependencies**: We have to add bootstrap and Axios using these commands:
 - npm install bootstrap --save
 - npm add axios  
+
+# APIs
+
+Here's the APIs need to be provided
+
+Methods	   |   Urls           |	  Actions        
+:--------: | :-------------:  |  :-------------:
+POST	   | http://localhost:8080/api/game |  calculate game result | 
+
+Table Data:
+
+<img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/JSONGameData.PNG">
