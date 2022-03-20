@@ -65,6 +65,6 @@ Methods	   |   Urls           |	  Actions
 :--------: | :-------------:  |  :-------------:
 POST	   | http://localhost:8080/api/game |  calculate game result | 
 
-Table Data:
+JSON Data:
 
 <img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/JSONGameData.PNG">
