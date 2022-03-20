@@ -11,8 +11,8 @@ The game is hosted at Heroku. You can play this game going to this link:
 # Tech Stack
 - **Backend**: 
     - Java 11
-    - Spring Boot 2.6.3 with 
-        - Spring Web
+    - Spring Boot 2.6.3
+    - Maven 3.8.1
 
 - **Frontend**: 
     - vue 3
@@ -45,4 +45,14 @@ Game Board after the game ends
 <img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/winning.png">
 
 
+# Project Setup
 
+**Spring boot dependencies**: Going to the [spring initializr](https://start.spring.io/), add the following dependencies and create project:
+
+- Spring Web (Web) 
+- Lombok (Developer Tools) 
+- Spring Data MongoDB (NoSQL)
+
+**Vue js dependencies**: We have to add bootstrap and Axios using these commands:
+- npm install bootstrap --save
+- npm add axios  
