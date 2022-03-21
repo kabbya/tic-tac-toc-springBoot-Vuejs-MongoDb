@@ -1,10 +1,11 @@
 package com.example.tictactoe.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
+@Setter @AllArgsConstructor
 public class Move {
 
     private int moveSerial;
