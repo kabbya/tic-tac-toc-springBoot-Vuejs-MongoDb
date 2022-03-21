@@ -149,6 +149,62 @@ public class GameServiceTest {
 	}
 	
 
+	@Test
+	public void findGameResultCircleWinsDiagonallyTest() {
+		Move move0 = new Move(0, 5, 5, false, "X");
+		Move move1 = new Move(1, 1, 1, false, "O");
+		Move move2 = new Move(2, 2, 2, false, "O");
+		Move move3 = new Move(3, 3, 3, false, "O");
+		List<Move> list = new ArrayList<Move>();
+		list.add(move0);
+		list.add(move1);
+		list.add(move2);
+		list.add(move3);
+		
+		int expectedGameResult = 2;
+		int actualGameResult = gameServiceImpl.findGameResult(new Game("1", 5, "Player1", "Player2", null, 0, list));
+
+		assertThat(actualGameResult).isEqualTo(expectedGameResult);
+	}
+	
+	@Test
+	public void findGameResultCircleWinsRowTest() {
+		Move move0 = new Move(0, 5, 5, false, "X");
+		Move move1 = new Move(1, 1, 1, false, "O");
+		Move move2 = new Move(2, 1, 2, false, "O");
+		Move move3 = new Move(3, 1, 3, false, "O");
+		List<Move> list = new ArrayList<Move>();
+		list.add(move0);
+		list.add(move1);
+		list.add(move2);
+		list.add(move3);
+		
+		int expectedGameResult = 2;
+		int actualGameResult = gameServiceImpl.findGameResult(new Game("1", 5, "Player1", "Player2", null, 0, list));
+
+		assertThat(actualGameResult).isEqualTo(expectedGameResult);
+	}
+	
+	
+	@Test
+	public void findGameResultCircleWinsColumnTest() {
+		Move move0 = new Move(0, 5, 5, false, "X");
+		Move move1 = new Move(1, 1, 1, false, "O");
+		Move move2 = new Move(2, 2, 1, false, "O");
+		Move move3 = new Move(3, 3, 1, false, "O");
+		List<Move> list = new ArrayList<Move>();
+		list.add(move0);
+		list.add(move1);
+		list.add(move2);
+		list.add(move3);
+		
+		int expectedGameResult = 2;
+		int actualGameResult = gameServiceImpl.findGameResult(new Game("1", 5, "Player1", "Player2", null, 0, list));
+
+		assertThat(actualGameResult).isEqualTo(expectedGameResult);
+	}
+	
+
 	
 	
 }
