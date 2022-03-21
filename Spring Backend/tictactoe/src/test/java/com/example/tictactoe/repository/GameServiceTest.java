@@ -1,6 +1,9 @@
 package com.example.tictactoe.repository;
 
 
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -87,5 +90,28 @@ public class GameServiceTest {
 		when(gameRepository.findAll()).thenReturn(allGameList);
 	    Assert.assertEquals(gameServiceImpl.getGame(), allGameList);
 	}
+	
+	
+
+	@Test
+	public void findGameResultCrossWinsDiagonallyTest() {
+		Move move0 = new Move(0, 5, 5, false, "X");
+		Move move1 = new Move(1, 1, 1, false, "X");
+		Move move2 = new Move(2, 2, 2, false, "X");
+		Move move3 = new Move(3, 3, 3, false, "X");
+		List<Move> list = new ArrayList<Move>();
+		list.add(move0);
+		list.add(move1);
+		list.add(move2);
+		list.add(move3);
+		
+		int expectedGameResult = 1;
+		int actualGameResult = gameServiceImpl.findGameResult(new Game("1", 5, "Player1", "Player2", null, 0, list));
+
+		assertThat(actualGameResult).isEqualTo(expectedGameResult);
+	}
+	
+
+	
 	
 }
