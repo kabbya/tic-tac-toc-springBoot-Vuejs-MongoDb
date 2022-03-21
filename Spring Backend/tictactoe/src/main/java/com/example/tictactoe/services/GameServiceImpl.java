@@ -4,16 +4,33 @@ package com.example.tictactoe.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.tictactoe.models.Game;
 import com.example.tictactoe.models.Move;
+import com.example.tictactoe.repository.GameRepository;
 
 @Service
 public class GameServiceImpl implements GameService{
+	
+	@Autowired
+	private GameRepository gameRepository;
 
     private int winningMoveSerial = 0;
-    List<Move> winningMoves = new ArrayList<>();
+    private List<Move> winningMoves = new ArrayList<>();
+    
+    @Override
+	public Game addGame(Game game) {
+		return gameRepository.save(game);
+	}
+    
+    
+	@Override
+	public List<Game> getGame() {
+		return gameRepository.findAll();
+	}
+
 
     @Override
     public boolean isValidIndex(int x, int y, int boardSize) {
@@ -135,7 +152,6 @@ public class GameServiceImpl implements GameService{
     public void setGameResult(Game game, int gameVerdict) {
         int xWin = 1;
         int oWin = 2;
-        int draw = 3;
 
         if(gameVerdict==xWin){
             game.setGameResult("X Wins the Game.");
@@ -192,6 +208,7 @@ public class GameServiceImpl implements GameService{
         }
         return  board;
     }
+
 
 
 }
