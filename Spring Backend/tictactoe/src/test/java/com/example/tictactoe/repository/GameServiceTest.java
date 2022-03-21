@@ -223,7 +223,37 @@ public class GameServiceTest {
 	}
 	
 	
-	
+	@Test
+	public void findGameResultDrawTest() {
+		Move move0 = new Move(0, 3, 3, false, "X");
+		Move move1 = new Move(1, 0, 0, false, "X");
+		Move move2 = new Move(2, 1, 1, false, "O");
+		Move move3 = new Move(3, 1, 0, false, "X");
+		Move move4 = new Move(4, 2, 0, false, "0");
+		Move move5 = new Move(5, 0, 2, false, "X");
+		Move move6 = new Move(6, 0, 1, false, "0");
+		Move move7 = new Move(7, 2, 1, false, "X");
+		Move move8 = new Move(8, 1, 2, false, "0");
+		Move move9 = new Move(9, 2, 2, false, "X");
+		
+		List<Move> list = new ArrayList<Move>();
+		list.add(move0);
+		list.add(move1);
+		list.add(move2);
+		list.add(move3);
+		list.add(move4);
+		list.add(move5);
+		list.add(move6);
+		list.add(move7);
+		list.add(move8);
+		list.add(move9);
+
+		
+		int expectedGameResult = 3;
+		int actualGameResult = gameServiceImpl.findGameResult(new Game("1", 3, "Player1", "Player2", null, 0, list));
+
+		assertThat(actualGameResult).isEqualTo(expectedGameResult);
+	}
 	
 	
 	
