@@ -1,7 +1,7 @@
 
 # Tic-Tac-Toe
 
-Tic-tac-toe is a game in which two players take turns in drawing either an ' O' or an ' X' in one square of the empty squares. The winner is the first player to get three of the same symbols in a row, column or diagonally. I have created the game tic-tac-toe, a full stack REST API web application using SpringBoot int the Backend, Vue.js in theFrontend and MongoDB to store the game history. 
+I have created a game, named tic-tac-toe, a full stack REST API web application using SpringBoot int the Backend, Vue.js in theFrontend and MongoDB to store the game history. Tic-tac-toe is a game in which two players take turns in drawing either an ' O' or an ' X' in one square of the empty squares. The winner is the first player to get three of the same symbols in a row, column or diagonally.
  
 ## 🔗 Live Porject Link
 
@@ -63,7 +63,8 @@ Here's the APIs need to be provided
 
 Methods	   |   Urls           |	  Actions        
 :--------: | :-------------:  |  :-------------:
-POST	   | http://localhost:8080/api/game |  calculate game result | 
+POST	   | http://localhost:8080/api/game |  calculates game result | 
+GET	       | http://localhost:8080/api/game |  shows game statistics  | 
 
 JSON Data:
 
@@ -72,3 +73,9 @@ JSON Data:
 MongoDB Documents
 
 <img src="https://github.com/kabbya/tic-tac-toc-springBoot-Vuejs-MongoDb/blob/main/ScreenShots/MongoDB%20Documents.PNG">
+
+# Future Work
+
+1) Show the game history.
+2) As the dimention increases of the board, for n>3, if both player plays optimally, then first player will always win. Hence, with some modified rules, a new game can be introduced - "Reversed Tic-Tac-Toe". 
+Here, the player will try not to put three same moves sequentially. If a player draw three moves in a row, column or diagonal then he losses the game. To make the game more interesting, a timer will be added. Based on the total time, the game can be devided into three levels such as easy, medium, hard.
